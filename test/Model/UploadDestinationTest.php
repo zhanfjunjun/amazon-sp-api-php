@@ -1,6 +1,6 @@
 <?php
 /**
- * ErrorTest
+ * UploadDestinationTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Swagger\Client;
 
 /**
- * ErrorTest Class Doc Comment
+ * UploadDestinationTest Class Doc Comment
  *
  * @category    Class */
-// * @description Error response returned when the request is unsuccessful.
+// * @description Information about an upload destination.
 /**
  * @package     Swagger\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ErrorTest extends \PHPUnit_Framework_TestCase
+class UploadDestinationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,33 @@ class ErrorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Error"
+     * Test "UploadDestination"
      */
-    public function testError()
+    public function testUploadDestination()
     {
 
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "upload_destination_id"
      */
-    public function testPropertyCode()
+    public function testPropertyUploadDestinationId()
     {
 
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "url"
      */
-    public function testPropertyMessage()
+    public function testPropertyUrl()
     {
 
     }
 
     /**
-     * Test attribute "details"
+     * Test attribute "headers"
      */
-    public function testPropertyDetails()
+    public function testPropertyHeaders()
     {
 
     }

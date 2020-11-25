@@ -1,6 +1,6 @@
 <?php
 /**
- * ErrorTest
+ * CreateUploadDestinationResponseTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Swagger\Client;
 
 /**
- * ErrorTest Class Doc Comment
+ * CreateUploadDestinationResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description Error response returned when the request is unsuccessful.
+// * @description The response schema for the createUploadDestination operation.
 /**
  * @package     Swagger\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ErrorTest extends \PHPUnit_Framework_TestCase
+class CreateUploadDestinationResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,25 @@ class ErrorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Error"
+     * Test "CreateUploadDestinationResponse"
      */
-    public function testError()
+    public function testCreateUploadDestinationResponse()
     {
 
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "payload"
      */
-    public function testPropertyCode()
+    public function testPropertyPayload()
     {
 
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "errors"
      */
-    public function testPropertyMessage()
-    {
-
-    }
-
-    /**
-     * Test attribute "details"
-     */
-    public function testPropertyDetails()
+    public function testPropertyErrors()
     {
 
     }

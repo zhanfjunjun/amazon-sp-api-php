@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **message** | **string** | A message that describes the error condition in a human-readable form. | 
 **details** | **string** | Additional details that can help the caller understand or fix the issue. | [optional] 
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
