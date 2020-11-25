@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **createUploadDestinationForResource**
-> \Swagger\Client\Model\CreateUploadDestinationResponse createUploadDestinationForResource($marketplace_ids, $content_md5, $resource, $content_type)
+> \models\CreateUploadDestinationResponse createUploadDestinationForResource($marketplace_ids, $content_md5, $resource, $content_type)
 
 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CreateUploadDestinationResponse**](../Model/CreateUploadDestinationResponse.md)
+[**\models\CreateUploadDestinationResponse**](../Model/CreateUploadDestinationResponse.md)
 
 ### Authorization
 
