@@ -1,6 +1,6 @@
 <?php
 /**
- * Error
+ * CreateUploadDestinationResponse
  *
  * PHP version 5
  *
@@ -44,32 +44,31 @@ namespace Models;
 use \ArrayAccess;
 
 /**
- * Error Class Doc Comment
+ * CreateUploadDestinationResponse Class Doc Comment
  *
  * @category    Class */
- // @description Error response returned when the request is unsuccessful.
+ // @description The response schema for the createUploadDestination operation.
 /** 
  * @package     Swagger\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Error implements ArrayAccess
+class CreateUploadDestinationResponse implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Error';
+    protected static $swaggerModelName = 'CreateUploadDestinationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'message' => 'string',
-        'details' => 'string'
+        'payload' => '\Models\UploadDestination',
+        'errors' => '\Models\ErrorList'
     );
 
     public static function swaggerTypes()
@@ -82,9 +81,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'payload' => 'payload',
+        'errors' => 'errors'
     );
 
     public static function attributeMap()
@@ -97,9 +95,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'payload' => 'setPayload',
+        'errors' => 'setErrors'
     );
 
     public static function setters()
@@ -112,9 +109,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'payload' => 'getPayload',
+        'errors' => 'getErrors'
     );
 
     public static function getters()
@@ -138,9 +134,8 @@ class Error implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -151,12 +146,6 @@ class Error implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['code'] === null) {
-            $invalid_properties[] = "'code' can't be null";
-        }
-        if ($this->container['message'] === null) {
-            $invalid_properties[] = "'message' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -168,75 +157,48 @@ class Error implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['code'] === null) {
-            return false;
-        }
-        if ($this->container['message'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets code
-     * @return string
+     * Gets payload
+     * @return \Models\UploadDestination
      */
-    public function getCode()
+    public function getPayload()
     {
-        return $this->container['code'];
+        return $this->container['payload'];
     }
 
     /**
-     * Sets code
-     * @param string $code An error code that identifies the type of error that occurred.
+     * Sets payload
+     * @param \Models\UploadDestination $payload
      * @return $this
      */
-    public function setCode($code)
+    public function setPayload($payload)
     {
-        $this->container['code'] = $code;
+        $this->container['payload'] = $payload;
 
         return $this;
     }
 
     /**
-     * Gets message
-     * @return string
+     * Gets errors
+     * @return \Models\ErrorList
      */
-    public function getMessage()
+    public function getErrors()
     {
-        return $this->container['message'];
+        return $this->container['errors'];
     }
 
     /**
-     * Sets message
-     * @param string $message A message that describes the error condition in a human-readable form.
+     * Sets errors
+     * @param \Models\ErrorList $errors
      * @return $this
      */
-    public function setMessage($message)
+    public function setErrors($errors)
     {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets details
-     * @return string
-     */
-    public function getDetails()
-    {
-        return $this->container['details'];
-    }
-
-    /**
-     * Sets details
-     * @param string $details Additional details that can help the caller understand or fix the issue.
-     * @return $this
-     */
-    public function setDetails($details)
-    {
-        $this->container['details'] = $details;
+        $this->container['errors'] = $errors;
 
         return $this;
     }

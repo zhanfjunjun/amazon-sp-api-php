@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **createUploadDestinationForResource**
-> \models\CreateUploadDestinationResponse createUploadDestinationForResource($marketplace_ids, $content_md5, $resource, $content_type)
+> \Models\CreateUploadDestinationResponse createUploadDestinationForResource($marketplace_ids, $content_md5, $resource, $content_type)
 
 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\models\CreateUploadDestinationResponse**](../Model/CreateUploadDestinationResponse.md)
+[**\Models\CreateUploadDestinationResponse**](../Model/CreateUploadDestinationResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Error
+ * UploadDestination
  *
  * PHP version 5
  *
@@ -44,32 +44,32 @@ namespace Models;
 use \ArrayAccess;
 
 /**
- * Error Class Doc Comment
+ * UploadDestination Class Doc Comment
  *
  * @category    Class */
- // @description Error response returned when the request is unsuccessful.
+ // @description Information about an upload destination.
 /** 
  * @package     Swagger\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Error implements ArrayAccess
+class UploadDestination implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Error';
+    protected static $swaggerModelName = 'UploadDestination';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'message' => 'string',
-        'details' => 'string'
+        'upload_destination_id' => 'string',
+        'url' => 'string',
+        'headers' => 'object'
     );
 
     public static function swaggerTypes()
@@ -82,9 +82,9 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'upload_destination_id' => 'uploadDestinationId',
+        'url' => 'url',
+        'headers' => 'headers'
     );
 
     public static function attributeMap()
@@ -97,9 +97,9 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'upload_destination_id' => 'setUploadDestinationId',
+        'url' => 'setUrl',
+        'headers' => 'setHeaders'
     );
 
     public static function setters()
@@ -112,9 +112,9 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'upload_destination_id' => 'getUploadDestinationId',
+        'url' => 'getUrl',
+        'headers' => 'getHeaders'
     );
 
     public static function getters()
@@ -138,9 +138,9 @@ class Error implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['upload_destination_id'] = isset($data['upload_destination_id']) ? $data['upload_destination_id'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['headers'] = isset($data['headers']) ? $data['headers'] : null;
     }
 
     /**
@@ -151,12 +151,6 @@ class Error implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['code'] === null) {
-            $invalid_properties[] = "'code' can't be null";
-        }
-        if ($this->container['message'] === null) {
-            $invalid_properties[] = "'message' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -168,75 +162,69 @@ class Error implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['code'] === null) {
-            return false;
-        }
-        if ($this->container['message'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets code
+     * Gets upload_destination_id
      * @return string
      */
-    public function getCode()
+    public function getUploadDestinationId()
     {
-        return $this->container['code'];
+        return $this->container['upload_destination_id'];
     }
 
     /**
-     * Sets code
-     * @param string $code An error code that identifies the type of error that occurred.
+     * Sets upload_destination_id
+     * @param string $upload_destination_id The unique identifier for the upload destination.
      * @return $this
      */
-    public function setCode($code)
+    public function setUploadDestinationId($upload_destination_id)
     {
-        $this->container['code'] = $code;
+        $this->container['upload_destination_id'] = $upload_destination_id;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets url
      * @return string
      */
-    public function getMessage()
+    public function getUrl()
     {
-        return $this->container['message'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets message
-     * @param string $message A message that describes the error condition in a human-readable form.
+     * Sets url
+     * @param string $url The URL for the upload destination.
      * @return $this
      */
-    public function setMessage($message)
+    public function setUrl($url)
     {
-        $this->container['message'] = $message;
+        $this->container['url'] = $url;
 
         return $this;
     }
 
     /**
-     * Gets details
-     * @return string
+     * Gets headers
+     * @return object
      */
-    public function getDetails()
+    public function getHeaders()
     {
-        return $this->container['details'];
+        return $this->container['headers'];
     }
 
     /**
-     * Sets details
-     * @param string $details Additional details that can help the caller understand or fix the issue.
+     * Sets headers
+     * @param object $headers The headers to include in the upload request.
      * @return $this
      */
-    public function setDetails($details)
+    public function setHeaders($headers)
     {
-        $this->container['details'] = $details;
+        $this->container['headers'] = $headers;
 
         return $this;
     }
